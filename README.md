@@ -18,6 +18,7 @@ python3 -m http.server 8000
 
 - `index.html`, `gazel.html`, `gruzovye.html`, `dmitrov-moskva.html` — страницы сайта.
 - `client.html` — предложение заказчику и основания решений.
+- `truck-scene.svg` — авторская изометрическая иллюстрация грузовика с анимированной линией маршрута; SVG лёгкий, работает без библиотек, анимация учитывает настройку reduced motion.
 - `brief.txt` — вопросы перед запуском.
 - `analysis.md`, `keywords-and-ads.md`, `queries.txt` — анализ и реклама.
 - `base-template.html`, `calculator.html`, `calculator.js` — исходные части сайта.
