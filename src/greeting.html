@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Поздравление · {{BRAND}}</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0e1116">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+{{CSS}}
+body{background:var(--dark);color:#fff}
+.g-wrap{max-width:880px;margin:0 auto;padding:0 20px}
+.g-top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.g-top .logo{color:#fff}
+.g-hero{padding:28px 0 8px}
+.g-hero h1{font-size:clamp(32px,5.4vw,56px);line-height:1.05;font-weight:800;letter-spacing:-.035em}
+.g-sub{margin-top:14px;font-size:18px;color:var(--accent);font-weight:600}
+.g-text{margin-top:18px;font-size:18px;line-height:1.55;color:#c4cad3;max-width:40em}
+.g-road{position:relative;height:190px;margin:28px 0 8px;overflow:hidden;border-bottom:2px solid #3a4250}
+.g-road::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:3px;background:repeating-linear-gradient(90deg,#ffc62966 0 26px,transparent 26px 48px);animation:road 1.2s linear 3}
+@keyframes road{to{background-position:-48px 0}}
+.g-truck{position:absolute;bottom:0;left:50%;transform:translateX(-50%);animation:drive-in 2.8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes drive-in{from{transform:translateX(calc(-50% - 70vw))}to{transform:translateX(-50%)}}
+.g-truck .ts-spin{animation:spin .5s linear 5}
+@keyframes spin{to{transform:rotate(360deg)}}
+.g-flag{position:absolute;top:10px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--ink);font-weight:700;font-size:14px;padding:6px 14px;border-radius:999px;white-space:nowrap;opacity:0;animation:pop .5s 2.6s forwards}
+@keyframes pop{from{opacity:0;transform:translate(-50%,8px)}to{opacity:1;transform:translate(-50%,0)}}
+.g-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:36px}
+.g-stat{background:var(--dark-2);border:1px solid var(--dark-line);border-radius:16px;padding:22px}
+.g-stat b{display:block;font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.g-stat span{display:block;margin-top:6px;font-size:15px;color:#c4cad3}
+.g-stat small{display:block;margin-top:12px;font-size:13.5px;color:var(--accent)}
+.g-kicker{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--dark-muted);margin-top:44px}
+.g-gift{margin-top:28px;background:var(--accent);color:var(--ink);border-radius:18px;padding:26px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.g-gift b{display:block;font-size:26px;font-weight:800;letter-spacing:-.02em}
+.g-gift span{font-size:15px}
+.g-gift .btn{background:var(--ink);color:#fff}
+.g-wish{margin-top:36px;font-size:22px;line-height:1.45;font-weight:600;max-width:34em}
+.g-sign{margin-top:18px;color:var(--dark-muted)}
+.g-actions{display:flex;gap:12px;flex-wrap:wrap;margin:32px 0 60px}
+/* generator */
+.gen{background:#fff;color:var(--ink);border-radius:20px;padding:28px;margin:12px 0 60px}
+.gen h1{font-size:30px;font-weight:800;line-height:1.15}
+.gen p.muted{margin-top:8px}
+.gen-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;margin-top:20px}
+.gen label{display:block;font-size:13px;font-weight:600}
+.gen input,.gen select{display:block;width:100%;margin-top:6px;border:1.5px solid #d3d8df;border-radius:10px;padding:11px 12px;font-size:16px;background:#fff}
+.gen input:focus,.gen select:focus{outline:none;border-color:var(--ink)}
+.gen-wide{grid-column:1/-1}
+.gen-out{margin-top:20px;background:var(--bg);border-radius:12px;padding:14px;font-size:13.5px;word-break:break-all}
+.gen-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.gen-actions .btn-ghost{color:var(--ink);border-color:#c8ced6}
+@media (max-width:640px){
+  .g-road{height:130px}
+  .g-stat b{font-size:38px}
+  .g-wish{font-size:19px}
+  .gen{padding:20px}
+  .gen-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .g-truck,.g-flag,.g-road::after,.g-truck .ts-spin{animation:none!important;opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="g-wrap">
+  <header class="g-top">
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M7 20.5V11h11v9.5M18 14h4.2l2.8 3.4v3.1H18" fill="none" stroke="#0e1116" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11.5" cy="21.5" r="2.2" fill="#0e1116"/><circle cx="21.5" cy="21.5" r="2.2" fill="#0e1116"/></svg>
+      <span class="logo-text"><b>{{BRAND}}</b><small>Дмитров · Москва · МО</small></span>
+    </a>
+    <a class="top-phone" href="tel:{{PHONE_TEL}}">{{PHONE}}</a>
+  </header>
+
+  <main id="card" hidden>
+    <section class="g-hero">
+      <h1 id="g-title"></h1>
+      <p class="g-sub" id="g-sub"></p>
+      <p class="g-text" id="g-text"></p>
+    </section>
+    <div class="g-road" aria-hidden="true">
+      <span class="g-flag">Спасибо, что едете с нами</span>
+      <svg class="g-truck" id="g-truck"></svg>
+    </div>
+    <p class="g-kicker" id="g-kicker">Что мы сделали вместе</p>
+    <div class="g-stats" id="g-stats"></div>
+    <div class="g-gift" id="g-gift" hidden>
+      <div><b id="g-gift-title"></b><span id="g-gift-text"></span></div>
+      <a class="btn btn-lg" href="index.html#quiz">Заказать рейс</a>
+    </div>
+    <p class="g-wish" id="g-wish"></p>
+    <p class="g-sign">Команда «{{BRAND}}»</p>
+    <div class="g-actions">
+      <a class="btn btn-accent btn-lg" href="index.html#quiz">Рассчитать следующий рейс</a>
+      <a class="btn btn-ghost btn-lg" href="tel:{{PHONE_TEL}}">Позвонить</a>
+    </div>
+  </main>
+
+  <main id="gen" hidden>
+    <form class="gen" id="gen-form">
+      <h1>Открытка для постоянного клиента</h1>
+      <p class="muted">Заполните поля — получите личную ссылку. Отправьте её клиенту в мессенджер. Пустые показатели на открытке не выводятся.</p>
+      <div class="gen-grid">
+        <label class="gen-wide">Повод<select name="h" id="gen-h"></select></label>
+        <label>Имя и отчество<input name="to" maxlength="60" placeholder="Сергей Петрович"></label>
+        <label>Компания<input name="co" maxlength="80" placeholder="ООО «Стройдом»"></label>
+        <label>С нами с какого года<input name="since" inputmode="numeric" maxlength="4" placeholder="2024"></label>
+        <label>Рейсов за год<input name="trips" inputmode="numeric" placeholder="24"></label>
+        <label>Тонн перевезли<input name="tons" inputmode="decimal" placeholder="86"></label>
+        <label>Километров проехали<input name="km" inputmode="numeric" placeholder="3100"></label>
+        <label>Подарок: скидка, %<input name="gift" inputmode="numeric" placeholder="10"></label>
+        <label>Подарок действует до<input name="until" maxlength="30" placeholder="30 ноября"></label>
+      </div>
+      <div class="gen-out" id="gen-out">Заполните хотя бы имя или компанию.</div>
+      <div class="gen-actions">
+        <button class="btn btn-accent" type="button" id="gen-copy">Скопировать ссылку</button>
+        <a class="btn btn-ghost" id="gen-open" target="_blank" rel="noopener">Открыть открытку</a>
+        <a class="btn btn-ghost" id="gen-tg" target="_blank" rel="noopener">Отправить в Telegram</a>
+      </div>
+      <p class="muted" style="font-size:13px;margin-top:14px">Данные передаются в самой ссылке, на сервере ничего не хранится. Не указывайте ничего, кроме того, что уместно на открытке.</p>
+    </form>
+  </main>
+</div>
+<script>
+window.SITE={{SITE_JSON}};
+{{JS}}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+Фото для фона первого экрана — временные, до съёмки машин заказчика.
+Источник: Wikimedia Commons. Лицензия CC0 — можно использовать без указания автора, в том числе в коммерческих целях.
+Обработка: размыты госномера, люди и наклейки, кадрирование 16:9, WebP 1000 и 2000 px.
+
+hero-1_5 — Газель 1,5 т
+  Moscow, Gazelle Next black tent, Mar 2026 03.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_Gazelle_Next_black_tent,_Mar_2026_03.jpg
+
+hero-2 — Газель удлинённая
+  Moscow, Gazelle Next long base, Sept 2025 01.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_Gazelle_Next_long_base,_Sept_2025_01.jpg
+
+hero-3 — машина 3 т
+  Moscow, Isuzu box truck, Mauy 2026 01.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_Isuzu_box_truck,_Mauy_2026_01.jpg
+
+hero-5 — пятитонник
+  Moscow, Gazon Next 8.7, Apr 2026 01.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_Gazon_Next_8.7,_Apr_2026_01.jpg
+
+hero-10 — десятитонник
+  Moscow, Howo box truck hiding under a bridge, Aug 2025 02.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_Howo_box_truck_hiding_under_a_bridge,_Aug_2025_02.jpg
+
+hero-20 — фура
+  Moscow, JAC K7 tractor-trailer, May 2026 01.jpg · CC0 · Retired electrician
+  https://commons.wikimedia.org/wiki/File:Moscow,_JAC_K7_tractor-trailer,_May_2026_01.jpg
+
+Замена: положите свои фото с теми же именами (hero-5-1000.webp и hero-5-2000.webp и т. д.), затем python3 build.py.

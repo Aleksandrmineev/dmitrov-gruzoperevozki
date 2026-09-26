@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESCRIPTION}}">
+<meta name="theme-color" content="#0e1116">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+{{CSS}}
+</style>
+{{METRIKA}}
+</head>
+<body>
+{{DEMO_BAR}}
+<aside class="occasion" id="occasion" hidden>
+  <div class="wrap occasion-in">
+    <svg class="occasion-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 5 5.6.8-4 3.9 1 5.5-5-2.7-5 2.7 1-5.5-4-3.9 5.6-.8z"/></svg>
+    <p><b id="occasion-title"></b> <span id="occasion-text"></span></p>
+    <button class="occasion-close" type="button" id="occasion-close" aria-label="Скрыть поздравление">×</button>
+  </div>
+</aside>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="logo" href="index.html" aria-label="{{BRAND}} — на главную">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor"/><path d="M7 20.5V11h11v9.5M18 14h4.2l2.8 3.4v3.1H18" fill="none" stroke="#0e1116" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11.5" cy="21.5" r="2.2" fill="#0e1116"/><circle cx="21.5" cy="21.5" r="2.2" fill="#0e1116"/></svg>
+      <span class="logo-text"><b>{{BRAND}}</b><small>Дмитров · Москва · МО</small></span>
+    </a>
+    <nav class="top-nav" aria-label="Услуги">{{NAV}}</nav>
+    <div class="top-contact">
+      <a class="top-phone" href="tel:{{PHONE_TEL}}" data-goal="phone_click">{{PHONE}}</a>
+      <small><i class="dot" aria-hidden="true"></i>{{HOURS}}</small>
+    </div>
+    <a class="btn btn-accent top-cta" href="#quiz" data-goal="cta_header">Рассчитать</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  {{HERO_BG}}
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-dark">{{EYEBROW}}</p>
+      <h1 id="h1">{{H1}}</h1>
+      <p class="hero-lead" id="lead">{{LEAD}}</p>
+      <ul class="promises">
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><b>Цена фиксируется до подачи.</b> В заявке — водитель не поднимет её на месте.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><b>Машина по габаритам.</b> Не поместилось по нашей ошибке — вторая машина за наш счёт.</span></li>
+        <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg><span><b>Подача от 1 часа по Дмитрову.</b> Оплата — после разгрузки.</span></li>
+      </ul>
+      <div class="route" aria-label="Цены по направлениям">
+        <div class="scene" id="scene" aria-hidden="true"></div>
+        <div class="route-stops">{{ROUTE_PRICES}}</div>
+      </div>
+    </div>
+
+    <div class="quiz" id="quiz" tabindex="-1">
+      <div class="quiz-head">
+        <span class="quiz-title">Расчёт стоимости за 30 секунд</span>
+        <span class="quiz-step" id="q-label">Шаг 1 из 4</span>
+      </div>
+      <div class="quiz-bar" aria-hidden="true"><i id="q-bar"></i></div>
+      <div class="quiz-body" id="q-body" aria-live="polite">
+        <noscript><p class="q-question">Позвоните — рассчитаем за 2 минуты</p><a class="btn btn-accent" href="tel:{{PHONE_TEL}}">{{PHONE}}</a></noscript>
+      </div>
+      <div class="quiz-foot">
+        <button class="link-btn" type="button" id="q-back" hidden>← Назад</button>
+        <span class="quiz-gift"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 9h14v8H3zM2 6h16v3H2zM10 6v11M10 6C8 2 5 3 6 5.2 6.6 6 10 6 10 6zm0 0c2-4 5-3 4-.8C13.4 6 10 6 10 6z"/></svg>−{{DISCOUNT}}% на первый рейс с сайта</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" aria-label="Коротко о сервисе">
+  <div class="wrap facts-in">
+    <div><b>6 классов машин</b><span>от Газели до фуры 20 т</span></div>
+    <div><b>Борт · тент · фургон</b><span>и шторные фуры с боковой загрузкой</span></div>
+    <div><b>Нал, безнал, НДС</b><span>договор и закрывающие документы</span></div>
+    <div><b>Оплата после разгрузки</b><span>без предоплаты для частных лиц</span></div>
+  </div>
+</section>
+
+<section class="section" id="fleet" aria-labelledby="fleet-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Машины</p><h2 id="fleet-h">Подберём машину под ваш груз</h2></div>
+      <p>Типовые габариты кузова. Точные размеры назовём по конкретной машине — до того, как вы подтвердите заказ.</p>
+    </div>
+    <div class="fleet">{{VEHICLES}}</div>
+    {{FLEET_MORE}}
+  </div>
+</section>
+
+<section class="section section-alt" id="price" aria-labelledby="price-h">
+  <div class="wrap price-in">
+    <div class="price-copy">
+      <p class="eyebrow">Цена без сюрпризов</p>
+      <h2 id="price-h">Сумма из заявки — это сумма, которую вы заплатите</h2>
+      <p class="muted">Главная претензия к перевозкам — доплаты на месте: «пробки», «лишний час», «груз тяжелее». Мы называем всё заранее и пишем в заявке, что входит в цену и в каких случаях возможна доплата.</p>
+      <ul class="checks">
+        <li><b>Подача, пробег и время погрузки</b> — уже в цене</li>
+        <li><b>Ожидание сверх включённого</b> — ставка за час указана заранее</li>
+        <li><b>Грузчики и доп. адреса</b> — отдельными строками, только если нужны</li>
+        <li><b>Пробки и платные дороги</b> — наш риск, цена не меняется</li>
+      </ul>
+    </div>
+    <figure class="quote-doc" aria-label="Образец расчёта">
+      <div class="qd-head"><span>Расчёт перевозки</span><span class="qd-tag">Образец</span></div>
+      <dl>
+        <div><dt>Маршрут</dt><dd>Дмитров, ул. Промышленная → Москва, Алтуфьевское ш.</dd></div>
+        <div><dt>Груз</dt><dd>6 паллет, 2,8 т, погрузка погрузчиком</dd></div>
+        <div><dt>Машина</dt><dd>5 т, тент, кузов 6,2 × 2,4 × 2,4 м</dd></div>
+        <div><dt>Включено</dt><dd>Подача, пробег, 1 ч погрузки и 1 ч разгрузки</dd></div>
+        <div><dt>Доплата возможна</dt><dd>Ожидание сверх 2 ч — по ставке из заявки</dd></div>
+      </dl>
+      <div class="qd-total"><span>Итого, фиксировано</span><b>21 000 ₽</b></div>
+      <div class="qd-foot">Цена действует для задания из заявки · оплата после разгрузки</div>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="guarantees" aria-labelledby="guar-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Гарантии</p><h2 id="guar-h">Что мы закрепляем в договоре-заявке</h2></div>
+      <p>Не обещания в рекламе, а условия, которые вы получаете письменно до подачи машины.</p>
+    </div>
+    <div class="guar">
+      <article><span class="guar-n">01</span><h3>Цена</h3><p>Сумма фиксируется до выезда. Пробки, платные дороги и «груз оказался тяжелее, чем выглядел» — не повод для доплаты.</p></article>
+      <article><span class="guar-n">02</span><h3>Машина</h3><p>Подбираем по весу, габаритам и способу погрузки. Если груз не поместился по нашей ошибке — вторую машину оплачиваем мы.</p></article>
+      <article><span class="guar-n">03</span><h3>Время подачи</h3><p>Согласуем окно подачи. Опоздали больше чем на 30 минут без предупреждения — минус 10% от стоимости рейса.</p></article>
+      <article><span class="guar-n">04</span><h3>Груз</h3><p>Перевозчик несёт материальную ответственность по договору. Для компаний — договор, счёт, акты, безнал с НДС.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="cargo" aria-labelledby="cargo-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Что возим</p><h2 id="cargo-h">Выберите задачу — подскажем машину и цену</h2></div>
+    </div>
+    <div class="tasks">
+      <button type="button" class="task" data-task="build" data-goal="task_click"><b>Стройматериалы</b><span>Блоки, кирпич на поддонах, сухие смеси, профиль, трубы до 13 м</span></button>
+      <button type="button" class="task" data-task="pallets" data-goal="task_click"><b>Паллеты и товары</b><span>От 1 до 33 паллет, склады и магазины, регулярные рейсы</span></button>
+      <button type="button" class="task" data-task="move" data-goal="task_click"><b>Мебель и переезд</b><span>Квартира, дом, офис. Упаковка и грузчики — по запросу</span></button>
+      <button type="button" class="task" data-task="equipment" data-goal="task_click"><b>Оборудование</b><span>Станки, витрины, стеллажи. Уточним вес и способ погрузки</span></button>
+      <button type="button" class="task" data-task="dacha" data-goal="task_click"><b>Дача и участок</b><span>Бытовки, материалы для стройки, садовая техника по округу</span></button>
+      <button type="button" class="task" data-task="shop" data-goal="task_click"><b>Покупки из магазинов</b><span>Строительные базы, мебельные и гипермаркеты Москвы и МО</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="steps" aria-labelledby="steps-h">
+  <div class="wrap">
+    <div class="section-head">
+      <div><p class="eyebrow">Как заказать</p><h2 id="steps-h">От заявки до разгрузки</h2></div>
+    </div>
+    <ol class="steps">
+      <li><span class="step-t">30 секунд</span><h3>Заявка</h3><p>Ответьте на 4 вопроса или позвоните. Адреса и детали можно уточнить голосом.</p></li>
+      <li><span class="step-t">10 минут</span><h3>Точная цена</h3><p>Перезвоним, подберём машину и пришлём расчёт: сумма, что входит, условия ожидания.</p></li>
+      <li><span class="step-t">от 1 часа</span><h3>Подача</h3><p>Машина приезжает в согласованное окно. Водитель знает адреса и задание.</p></li>
+      <li><span class="step-t">после разгрузки</span><h3>Оплата</h3><p>Наличными, переводом или по счёту. Сумма — как в заявке.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="photo-cta" aria-labelledby="photo-h">
+  <div class="wrap photo-in">
+    <div>
+      <p class="eyebrow eyebrow-dark">Не знаете, какая машина нужна?</p>
+      <h2 id="photo-h">Пришлите фото груза — подберём машину и назовём цену за 10 минут</h2>
+      <p>Сфотографируйте, что нужно перевезти, и напишите адреса. Не нужно разбираться в тоннаже и кузовах.</p>
+    </div>
+    <div class="photo-actions">
+      <a class="btn btn-accent btn-lg" href="{{TELEGRAM}}" data-messenger="telegram" data-goal="messenger_click" target="_blank" rel="noopener">Отправить в Telegram</a>
+      <a class="btn btn-ghost btn-lg" href="{{MAX}}" data-messenger="max" data-goal="messenger_click" target="_blank" rel="noopener">Отправить в MAX</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="b2b" aria-labelledby="b2b-h">
+  <div class="wrap b2b-in">
+    <div>
+      <p class="eyebrow">Компаниям</p>
+      <h2 id="b2b-h">Регулярные перевозки по договору</h2>
+      <ul class="checks">
+        <li><b>Договор, счёт, акты</b> — безнал с НДС и без</li>
+        <li><b>Один менеджер</b> — знает ваши адреса и требования</li>
+        <li><b>Фиксированный прайс</b> на повторяющиеся маршруты</li>
+      </ul>
+    </div>
+    <form class="lead-form b2b-form" data-kind="b2b" novalidate>
+      <h3>Получить прайс и договор</h3>
+      <label>Компания<input name="company" autocomplete="organization" placeholder="Название или ИНН"></label>
+      <label>Телефон<input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+      <label class="consent"><input type="checkbox" name="consent" required><span>Согласен на обработку персональных данных по <a href="privacy.html">политике</a></span></label>
+      <button class="btn btn-accent btn-block" type="submit">Получить прайс</button>
+      <p class="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section class="section section-alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq-in">
+    <div><p class="eyebrow">Вопросы</p><h2 id="faq-h">Коротко о главном</h2></div>
+    <div class="faq">
+      <details><summary>Может ли цена измениться на месте?</summary><p>Нет, если задание не изменилось. Сумма фиксируется в заявке. Изменится она, только если вы добавите адрес, груз или время ожидания превысит включённое — ставки за это указаны в заявке заранее.</p></details>
+      <details><summary>Как быстро приедет машина?</summary><p>По Дмитрову — от 1 часа, если есть свободная машина нужного класса. Точное окно подачи назовём при расчёте. На завтра и конкретное время лучше заказывать заранее.</p></details>
+      <details><summary>Что если груз не поместится?</summary><p>Мы подбираем машину по весу, габаритам и количеству мест. Если ошиблись мы — вторую машину или доставку остатка оплачиваем сами. Поэтому при расчёте уточняем размеры и можем попросить фото.</p></details>
+      <details><summary>Нужны ли грузчики?</summary><p>Водитель помогает с креплением груза, но не выполняет погрузку. Грузчиков добавим по запросу — цена зависит от числа людей, этажа и лифта и указывается в заявке отдельной строкой.</p></details>
+      <details><summary>Как оплатить?</summary><p>После разгрузки: наличными, переводом или по счёту. Для компаний — договор, безнал с НДС и без, закрывающие документы.</p></details>
+      <details><summary>Возите за пределы Москвы и области?</summary><p>Основное направление — Дмитров, Москва и Московская область. Междугородние рейсы на фурах 20 т рассчитываем индивидуально.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-h">
+  <div class="wrap final-in">
+    <div>
+      <h2 id="final-h">Узнайте точную цену перевозки</h2>
+      <p>4 вопроса — и предварительная стоимость. Точную цену зафиксируем за 10 минут, на первый рейс — скидка {{DISCOUNT}}%.</p>
+    </div>
+    <div class="final-actions">
+      <a class="btn btn-accent btn-lg" href="#quiz" data-goal="cta_final">Рассчитать стоимость</a>
+      <a class="final-phone" href="tel:{{PHONE_TEL}}" data-goal="phone_click">{{PHONE}}</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div><b>{{BRAND}}</b><p>Грузоперевозки по Дмитрову, Дмитровскому округу, Москве и Московской области.</p><p class="muted">{{LEGAL}}</p></div>
+    <nav aria-label="Страницы">{{NAV}}</nav>
+    <div><a class="foot-phone" href="tel:{{PHONE_TEL}}" data-goal="phone_click">{{PHONE}}</a><p class="muted">{{HOURS}}</p><p><a href="privacy.html">Политика обработки данных</a></p></div>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Быстрая связь">
+  <a href="tel:{{PHONE_TEL}}" class="dock-call" data-goal="phone_click" aria-label="Позвонить"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5l2.6.4 1.2 4-1.9 1.4a11 11 0 0 0 6.2 6.2l1.4-1.9 4 1.2.4 2.6c.1.9-.6 1.7-1.5 1.7C10.4 19.1 4.9 13.6 4.9 5c0-.9.8-1.6 1.7-1.5z"/></svg></a>
+  <a href="{{TELEGRAM}}" class="dock-msg" data-messenger="telegram" data-goal="messenger_click" target="_blank" rel="noopener">Telegram</a>
+  <a href="#quiz" class="btn btn-accent" data-goal="cta_dock">Рассчитать цену</a>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+window.SITE={{SITE_JSON}};
+window.TARIFFS={{TARIFFS_JSON}};
+window.PAGE={{PAGE_JSON}};
+{{JS}}
+</script>
+</body>
+</html>
