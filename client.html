@@ -88,6 +88,35 @@ td b{font-weight:600}
 .checks small{display:block;color:var(--muted);font-size:13px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
 .two h3{font-size:20px;margin-bottom:6px}
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:stretch}
+.plan-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-direction:column}
+.plan-card.featured{border:2px solid var(--ink);position:relative}
+.plan-badge{position:absolute;top:-13px;left:24px;background:var(--accent);color:var(--ink);font-size:12.5px;font-weight:700;padding:4px 12px;border-radius:999px}
+.plan-card h3{font-size:20px}
+.plan-price{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;margin:14px 0 4px}
+.plan-sub{font-size:14px;color:var(--muted)}
+.plan-card ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:9px;align-content:start;font-size:14.5px;flex:1}
+.plan-card li{position:relative;padding-left:26px;color:var(--ink-2)}
+.plan-card li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.5' fill='none' stroke='%230e1116' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.plan-card li.plus{font-weight:600;color:var(--ink)}
+.plan-card li.inherit{font-weight:600;color:var(--ink)}
+.plan-card li.inherit::before{background:var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3.2L15 6.5' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.plan-foot{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.plan-foot b{color:var(--ink)}
+.ads{margin-top:16px;background:var(--dark);color:#fff;border-radius:16px;padding:28px;display:grid;grid-template-columns:1.1fr 1fr;gap:32px}
+.ads h3{font-size:22px}
+.ads p{color:#aeb6c2;margin-top:10px;font-size:15px}
+.ads-rows{display:grid;gap:0}
+.ads-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--dark-line);font-size:15px;color:#c4cad3}
+.ads-row:last-child{border-bottom:0}
+.ads-row b{color:#fff;white-space:nowrap;font-size:17px}
+.ads-row small{display:block;font-size:12.5px;color:#7d8694;margin-top:2px}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.terms div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;font-size:14px;color:var(--ink-2)}
+.terms b{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+@media(max-width:860px){.plans,.ads,.terms{grid-template-columns:1fr}}
+@media print{.ads{background:#fff;color:var(--ink);border:1px solid var(--line)}.ads p,.ads-row,.ads-row b{color:var(--ink)}}
 footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
 @media(max-width:860px){
   .kpis,.plan{grid-template-columns:1fr 1fr}
@@ -125,6 +154,7 @@ footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
     <div class="actions">
       <a class="btn btn-accent" href="index.html">Открыть сайт →</a>
       <a class="btn btn-ghost" href="#roi">Модель окупаемости</a>
+      <a class="btn btn-ghost" href="#price">Стоимость</a>
       <button class="btn btn-ghost" type="button" onclick="print()">Сохранить PDF</button>
     </div>
     <div class="kpis">
@@ -237,10 +267,73 @@ footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
   </div>
 </section>
 
+<section id="price">
+  <div class="wrap">
+    <div class="sh"><div><p class="n">05</p><h2>Стоимость и условия</h2></div><p>Два варианта сайта — разница только в том, будете ли вы менять содержимое сами. Оплата после того, как сайт запущен и заявки проверены.</p></div>
+    <div class="plans">
+      <div class="plan-card">
+        <h3>Сайт под рекламу</h3>
+        <p class="plan-price">50 000 ₽</p>
+        <p class="plan-sub">Правки текстов и цен после запуска — через меня</p>
+        <ul>
+          <li>4 страницы: главная, Газель и 3 т, 5–20 т, Дмитров ↔ Москва</li>
+          <li>Квиз-калькулятор: цена за 30 секунд без ввода телефона</li>
+          <li>Отдельный заголовок под каждую группу объявлений</li>
+          <li>Фото на фоне и анимированная схема машины под выбор клиента</li>
+          <li>Адаптив под телефоны и планшеты</li>
+          <li>Заявки в Telegram и на почту, защита от спама</li>
+          <li>Всплывающие окна и предложение при попытке уйти со страницы</li>
+          <li>Яндекс Метрика с целями на каждом шаге до заявки</li>
+          <li>SEO-основа: title и description, понятные адреса, robots.txt, sitemap.xml, Open Graph, микроразметка FAQ</li>
+          <li>Страницы «Спасибо», 404, политика данных, cookie-баннер</li>
+          <li>Скорость загрузки 90+ по PageSpeed</li>
+          <li>Подключение домена, HTTPS, резервные копии, запуск</li>
+          <li>Праздничные поздравления и открытки постоянным клиентам</li>
+          <li>Месяц поддержки после запуска</li>
+        </ul>
+        <div class="plan-foot"><b>Оплата 100% после запуска</b> и проверки, что заявки доходят</div>
+      </div>
+      <div class="plan-card featured">
+        <span class="plan-badge">Если хотите менять сайт сами</span>
+        <h3>Сайт под рекламу + админка</h3>
+        <p class="plan-price">80 000 ₽</p>
+        <p class="plan-sub">Тексты, цены, машины и контакты меняете сами, без программиста</p>
+        <ul>
+          <li class="inherit">Всё из варианта за 50 000 ₽</li>
+          <li class="plus">Админка: редактирование текстов, цен, машин, телефона и праздничных акций</li>
+          <li class="plus">Все заявки хранятся в админке: откуда пришёл клиент, по какому объявлению, что выбрал в калькуляторе</li>
+          <li class="plus">Отправка заявок в CRM</li>
+        </ul>
+        <div class="plan-foot"><b>Оплата 100% после запуска</b> и проверки, что заявки доходят</div>
+      </div>
+    </div>
+
+    <div class="ads">
+      <div>
+        <p class="label">Отдельно · по желанию</p>
+        <h3>Реклама в Яндекс Директе</h3>
+        <p>Сайт сделан под рекламу: план кампаний, фразы и объявления уже готовы. Каждую неделю — отчёт в рублях: сколько потратили, сколько заявок, во сколько обошёлся клиент.</p>
+        <p>Первый месяц — тест. Если заявка обходится дороже, чем вы зарабатываете с рейса, скажу честно и остановим.</p>
+      </div>
+      <div class="ads-rows">
+        <div class="ads-row"><span>Запуск рекламы<small>Кампании, фразы, объявления, минус-слова, связка с Метрикой</small></span><b>20 000 ₽</b></div>
+        <div class="ads-row"><span>Ведение<small>Чистка запросов, ставки, тесты объявлений, еженедельный отчёт</small></span><b>15 000 ₽/мес</b></div>
+        <div class="ads-row"><span>Рекламный бюджет<small>Оплачиваете Яндексу напрямую, сумму определим по прогнозу</small></span><b>ваш</b></div>
+      </div>
+    </div>
+
+    <div class="terms">
+      <div><b>Сроки</b>После того как получу контакты, реквизиты и подтверждённые цены.</div>
+      <div><b>Что нужно от вас</b>Данные из раздела 07 и ответы на бриф. Фото ваших машин — если есть.</div>
+      <div><b>Не входит</b>Новые разделы и страницы сверх перечисленных — по отдельной договорённости.</div>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap two">
     <div>
-      <p class="n">05</p>
+      <p class="n">06</p>
       <h3>Что нужно подтвердить — это обещания на сайте</h3>
       <p class="muted" style="margin-bottom:10px">Отметьте, с чем согласны. Остальное уберём или изменим.</p>
       <div class="checks">
@@ -257,7 +350,7 @@ footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
       </div>
     </div>
     <div>
-      <p class="n">06</p>
+      <p class="n">07</p>
       <h3>Что нужно для запуска</h3>
       <p class="muted" style="margin-bottom:10px">Всё остальное уже сделано. Подробный бриф — в <a href="brief.txt">brief.txt</a>.</p>
       <div class="checks">
@@ -268,7 +361,7 @@ footer{padding:32px 0 48px;font-size:13px;color:var(--muted)}
         <label><input type="checkbox"><span>Доступ к Метрике и Директу или создать новые</span></label>
         <label><input type="checkbox"><span>Коллтрекинг<small>Без него не будет видно, какие фразы приносят звонки</small></span></label>
         <label><input type="checkbox"><span>Домен и хостинг</span></label>
-        <label><input type="checkbox"><span>Фото ваших машин и реальные отзывы<small>Добавим после запуска — это поднимет конверсию ещё</small></span></label>
+        <label><input type="checkbox"><span>Фото ваших машин и реальные отзывы, если есть<small>Заменю ими временные фото — доверие к сайту вырастет</small></span></label>
       </div>
     </div>
   </div>
